@@ -1,0 +1,36 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/gloabl.css';
+import '../styles/font.css';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Nordic Web Solutions_ {title}</title>
+  </head>
+  <body id="page-top">
+    <Navigation />
+
+    <slot />
+
+    <Footer />
+
+    <script is:inline src="/js/bootstrap.min.js"></script>
+    <script is:inline src="/js/script.js"></script>
+  </body>
+</html>
+

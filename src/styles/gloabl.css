@@ -11310,6 +11310,8 @@ html {
     scroll-padding-top: calc(4.5rem - 1px);
 }
 
+/* custom starts here */
+
 .page-section {
     padding: 0.75rem 0;
 }
@@ -11636,7 +11638,7 @@ html {
 @media (min-width: 767.98px) {
 
     .portfolio-background {
-        background: linear-gradient(white 50%, transparent 50% 100%), url('../assets/img/Bild-BG.png');
+        background: linear-gradient(white 50%, transparent 50% 100%), url('img/Bild-BG.png');
     }
     .rf-card {
         border-top-left-radius: 50px;
@@ -11653,11 +11655,11 @@ html {
 }
 
 @media (min-width: 991.98px) {
-    
+
     .uncenter {
         align-items: unset!important;
     }
-    
+
     .rf-card {
         border-bottom-right-radius: 50px;
         border-top-left-radius: 50px;
@@ -11683,7 +11685,7 @@ html {
         margin: 0;
         margin-right: 4rem;
     }
-    
+
     .special-headline-g {
         transform: rotate(180deg);
         writing-mode: vertical-lr;
@@ -11691,7 +11693,7 @@ html {
         margin-left: 2.5rem;
         padding-bottom: 4rem;
     }
-    
+
     .footer-address {
         text-align: left!important;
     }
@@ -11737,11 +11739,11 @@ html {
     .col-lg-1 {
         padding-right: 0;
     }
-    
+
     .parent-sl {
         position: relative;
     }
-    
+
     .stupid-line {
         display: block;
         position: absolute;
