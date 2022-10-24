@@ -1,7 +1,11 @@
 {
-  "name": "@example/basics",
+  "name": "@nws/website",
+  "author": {
+    "name": "kassuro | Luca Fuhl",
+    "email": "lf@nordic-web-solutions.de"
+  },
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -11,6 +15,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.6.0",
     "astro": "^1.5.2"
   }
 }
