@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Slider from '../components/Slider.astro';
-
+import Header from '../components/Header/Header.astro';
+import Portfolio from '../components/Portfilio/Portfolio.astro';
+import Slider from '../components/Slider/Slider.astro';
 ---
 
 <Layout title="">
@@ -13,28 +12,44 @@ import Slider from '../components/Slider.astro';
   <section class="page-section bg-primary mb-0 pt-md-7 pt-lg-7" id="about">
     <div class="container">
       <div class="row justify-content-center content-row">
-        <h2 class="section-header text-left text-uppercase mb-5">Wer wir sind</h2>
+        <h2 class="section-header text-left text-uppercase mb-5">
+          Wer wir sind
+        </h2>
         <div class="col-md-6 col-lg-6 mb-5 pl-lg-0">
           <div class="row justify-content-center content-row">
             <div class="col-lg-5 text-center">
-              <img class="avatar" src="img/360_F_262064285_nJbwu91V3nqAH32zLdcvYweaXGtLtnQW.jpeg" alt=""/>
+              <img
+                class="avatar"
+                src="img/360_F_262064285_nJbwu91V3nqAH32zLdcvYweaXGtLtnQW.jpeg"
+                alt=""
+              />
             </div>
-            <div class="col-lg-7 d-flex flex-column mt-3 mb-3  tp-card">
-              <div class="col name oswald text-uppercase">Wolfgang Greschus</div>
+            <div class="col-lg-7 d-flex flex-column mt-3 mb-3 tp-card">
+              <div class="col name oswald text-uppercase">
+                Wolfgang Greschus
+              </div>
               <div class="col job-type">Backend-Entwickler</div>
-              <div class="col skills oswald">NODEJS | NESTJS | TYPESCRIPT | JAVASCRIPT | DOCKER</div>
+              <div class="col skills oswald">
+                NODEJS | NESTJS | TYPESCRIPT | JAVASCRIPT | DOCKER
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-6 mb-5 pl-lg-0">
           <div class="row justify-content-center content-row">
             <div class="col-lg-5 text-center">
-              <img class="avatar" src="img/360_F_262064285_nJbwu91V3nqAH32zLdcvYweaXGtLtnQW.jpeg" alt=""/>
+              <img
+                class="avatar"
+                src="img/360_F_262064285_nJbwu91V3nqAH32zLdcvYweaXGtLtnQW.jpeg"
+                alt=""
+              />
             </div>
-            <div class="col-lg-7 d-flex flex-column mt-3 mb-3  tp-card">
+            <div class="col-lg-7 d-flex flex-column mt-3 mb-3 tp-card">
               <div class="col name oswald text-uppercase">LUCA FUHL</div>
               <div class="col job-type">Backend-Entwickler</div>
-              <div class="col skills oswald">NODEJS | VUEJS | TYPESCRIPT | JAVASCRIPT | DOCKER</div>
+              <div class="col skills oswald">
+                NODEJS | VUEJS | TYPESCRIPT | JAVASCRIPT | DOCKER
+              </div>
             </div>
           </div>
         </div>
@@ -43,10 +58,6 @@ import Slider from '../components/Slider.astro';
   </section>
 
   <Slider />
-
-
 </Layout>
 
-<style>
-
-</style>
+<style></style>
