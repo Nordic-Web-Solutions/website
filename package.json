@@ -12,7 +12,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier -w ./src"
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13"
+    "cssnano": "^5.1.13",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.7.0"
   }
 }
