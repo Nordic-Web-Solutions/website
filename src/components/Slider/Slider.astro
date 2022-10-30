@@ -139,10 +139,14 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
         </div>
 
         <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<"
-          ></button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">"
-          ></button>
+          <button
+            class="glide__arrow glide__arrow--left"
+            data-glide-dir="<"
+            aria-label="Slider previous"></button>
+          <button
+            class="glide__arrow glide__arrow--right"
+            data-glide-dir=">"
+            aria-label="Slider next"></button>
         </div>
       </div>
     </div>
@@ -153,10 +157,10 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
 </section>
 
 <script>
-  // @ts-ignore
   import Glide, {
     Controls,
     Breakpoints,
+    // @ts-ignore
   } from '@glidejs/glide/dist/glide.modular.esm';
 
   // @ts-ignore
