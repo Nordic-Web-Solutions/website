@@ -25,13 +25,15 @@ const { title } = Astro.props;
       name="description"
       content="Wir sind Nordic-Web-Solutions, ein kleiner Softwaredienstleister aus dem Raum Hamburg."
     />
-    <meta name="author" content="" />
+    <meta name="author" content="Luca Fuhl, Wolfgang Greschus" />
     <title>Nordic Web Solutions_ {`| ${title}`}</title>
   </head>
   <body id="page-top">
     <Navigation />
 
-    <slot />
+    <main class="content">
+      <slot />
+    </main>
 
     <Footer />
   </body>
@@ -41,6 +43,11 @@ const { title } = Astro.props;
   h2.section-header {
     font-size: 1.25rem;
     letter-spacing: 2.6px;
+  }
+
+  .content {
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   .page-section {
@@ -371,7 +378,7 @@ const { title } = Astro.props;
   @media (min-width: 767.98px) {
     .portfolio-background {
       background: linear-gradient(white 50%, transparent 50% 100%),
-        url('/img/Bild-BG.png');
+        url('/img/background.jpg');
     }
     .rf-card {
       border-top-left-radius: 50px;
@@ -415,7 +422,7 @@ const { title } = Astro.props;
       writing-mode: vertical-lr;
       letter-spacing: 2.6px;
       margin: 0;
-      margin-right: 4rem;
+      margin-right: 2.5rem;
     }
 
     .special-headline-g {
@@ -428,6 +435,7 @@ const { title } = Astro.props;
 
     .footer-address {
       text-align: left !important;
+      padding-top: 1.5rem;
     }
     .content-row {
       padding-left: 0.75rem;
