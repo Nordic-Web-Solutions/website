@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+  build:
+    image: node:16
+    user: '1000:1001'
+    command: sh -c "npm install --ci && npm run build && chmod -R 777 ./dist && chmod -R 777 ./node_modules"
+    working_dir: /usr/src/app/frontend
+    volumes:
+      - ./:/usr/src/app:delegated
