@@ -1,11 +1,39 @@
+---
+interface NavItem {
+  title: string;
+  link: string;
+}
+
+const navItems: NavItem[] = [
+  {
+    link: '/#portfolio',
+    title: 'Was wir machen',
+  },
+  {
+    link: '/#about',
+    title: 'Wer wir sind',
+  },
+  // enable once we have something here
+  // {
+  //   link: '/#references',
+  //   title: 'Referenzen',
+  // },
+  {
+    link: '/#contact',
+    title: 'Kontakt',
+  },
+];
+---
+
 <nav
   class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top"
   id="mainNav"
 >
   <div class="container">
-    <a class="navbar-brand" href="#page-top"
-      ><img class="logo" src="img/Logo@2x.png" alt="Nordic Logo" />
+    <a class="navbar-brand" href="/#page-top">
+      <img class="logo" src="img/Logo@2x.png" alt="Nordic Logo" />
     </a>
+
     <button
       class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
       type="button"
@@ -17,26 +45,19 @@
     >
       <i class="fas fa-bars"></i>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"
-            >Was wir machen</a>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
-            >Wer wir sind</a>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#credentials"
-            >Referenzen</a>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1">
-          <a
-            class="nav-link py-3 px-0 px-lg-3 rounded"
-            style="padding-right: 0!important;"
-            href="#contact">Kontakt</a>
-        </li>
+        {
+          navItems.map((navItem) => (
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href={navItem.link}>
+                {' '}
+                {navItem.title}{' '}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
@@ -47,8 +68,8 @@
 
   window.addEventListener('DOMContentLoaded', (event) => {
     const menu = document.body.querySelector('#mainNav')!;
-    const scrollspy = new ScrollSpy(menu, 50);
-    scrollspy.init();
+    // const scrollspy = new ScrollSpy(menu, 50);
+    // scrollspy.init();
 
     // Navbar shrink function
     const navbarShrink = function () {
@@ -90,3 +111,9 @@
     document.addEventListener('scroll', navbarShrink);
   });
 </script>
+
+<style>
+  a.nav-link:last-child {
+    padding-right: 0 !important;
+  }
+</style>
