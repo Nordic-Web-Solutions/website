@@ -37,11 +37,6 @@ const navItems: NavItem[] = [
     <button
       class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
     >
       <i class="fas fa-bars"></i>
     </button>
@@ -68,8 +63,8 @@ const navItems: NavItem[] = [
 
   window.addEventListener('DOMContentLoaded', (event) => {
     const menu = document.body.querySelector('#mainNav')!;
-    // const scrollspy = new ScrollSpy(menu, 50);
-    // scrollspy.init();
+    const scrollspy = new ScrollSpy(menu, 50);
+    scrollspy.init();
 
     // Navbar shrink function
     const navbarShrink = function () {
@@ -89,6 +84,12 @@ const navItems: NavItem[] = [
     // Collapse responsive navbar when toggler is visible
     const navbarToggler =
       document.body.querySelector<HTMLButtonElement>('.navbar-toggler');
+
+    if (navbarToggler !== null) {
+      navbarToggler.addEventListener('click', () => {
+        document.getElementById('navbarResponsive')?.classList.toggle('show');
+      });
+    }
 
     const responsiveNavItems: HTMLAnchorElement[] = Array.prototype.slice.call(
       document.querySelectorAll('#navbarResponsive .nav-link'),
