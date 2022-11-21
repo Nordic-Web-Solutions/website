@@ -380,8 +380,10 @@ const { title } = Astro.props;
 
   @media (min-width: 767.98px) {
     .portfolio-background {
-      background: linear-gradient(white 50%, transparent 50% 100%),
-        url('/img/background.jpg');
+      background-image:  url('/img/background.jpg');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+
     }
     .rf-card {
       border-top-left-radius: 50px;
